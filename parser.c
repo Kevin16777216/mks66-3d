@@ -162,16 +162,6 @@ void parse_file ( char * filename,
                 xvals[1], yvals[1], step);
     }
 
-
-    //clear
-    else if ( check_str(line, "clear")) {
-      // fgets(line, sizeof(line), f);
-      free_matrix(edges);
-      free_matrix(transform);
-      edges = new_matrix(4,4);
-      transform = new_matrix(4,4);
-    }
-    
     //scale
     else if (check_str(line, "scale")) {
       fgets(line, sizeof(line), f);
