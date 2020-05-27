@@ -217,7 +217,7 @@ void parse_file ( char * filename,
     //display
     else if ( check_str(line, "display")) {
       clear_screen(s);
-      draw_tris(edges, s, c);
+      draw_lines(edges, s, c);
       display(s);
     }
 
@@ -226,7 +226,7 @@ void parse_file ( char * filename,
       fgets(line, sizeof(line), f);
       *strchr(line, '\n') = 0;
       clear_screen(s);
-      draw_tris(edges, s, c);
+      draw_lines(edges, s, c);
       save_extension(s, line);
     }
   }
